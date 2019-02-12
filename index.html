@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="waveform-spectrum.js"></script>
+</head>
+<body ondrop="onDrop(event);" ondragover="onDragOver(event);">
+<h1>波形データ＆周波数スペクトル</h1>
+<table>
+ <tr><th>マイク</th><th>音声ファイル</th><th>テンプレート</th></tr>
+ <tr>
+  <td><button id="btn_play" onclick="play(true);">マイク接続</button> <button  id="btn_stop" onclick="stop();" disabled="true">マイク停止</button></td>
+  <td>&nbsp;&nbsp;<input type="file" id="inputfile" onchange="onAddFile(event);" style="padding:0;width:240px;"></td>
+  <td>
+    <select id="list" onchange="onSelected();">
+      <option value="0" >未選択</option>    
+      <option value="1" >砂嵐(曲)</option>
+      <option value="2">ドレミ(曲)</option>
+      <option value="3">サイン波(440Hz)</option>
+      <option value="4">三角波(440Hz)</option>
+      <option value="5">矩形波(440Hz)</option>
+      <option value="6">のこぎり波(440Hz)</option>        
+    </select>
+    <br><span style="color:green;font-size:12px;">※テスト用の音声です。</span>
+  </td>
+ </tr>
+</table>
+<p>
+<audio id="myAudio" controls style="padding:0;width:512px;"></audio> <br>
+</p>
+<script>  
+  var userAgent = window.navigator.userAgent.toLowerCase();
+  if(userAgent.indexOf('msie') != -1 || userAgent.indexOf('trident') != -1) {            
+    document.write('<p style="color:red;">お使いのInternet Explorerでは実行できません。<br />※Chrome/Firefox/MS Edgeでご利用ください。</p>');
+  }         
+</script>
+<p style="font-weight:bold;">波形データ</p>
+<canvas id="canvas1" style="border:1px solid #ccc;"></canvas>
+<p style="font-weight:bold;">周波数スペクトル</p>
+<canvas id="canvas2" style="border:1px solid #ccc;"></canvas>
+</body>
+</html>
