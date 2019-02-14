@@ -1,16 +1,3 @@
-/**************************************************/
-/*                                                */
-/*     波形データ＆周波数スペクトル               */
-/*                                      v1.00     */
-/*                                                */
-/*     https://www.petitmonte.com/                */
-/*                                                */
-/*     Copyright 2019 Takeshi Okamoto (Japan)     */
-/*     Released under the MIT license             */
-/*                                                */
-/*                            Date: 2019-02-12    */
-/**************************************************/
-
 // キャンバス
 var canvas1,canvas2;
 var ctx1,ctx2;
