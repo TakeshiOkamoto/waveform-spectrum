@@ -7,3 +7,6 @@ DEMO
 [https://www.petitmonte.com/labo/waveform-spectrum/](https://www.petitmonte.com/labo/waveform-spectrum/)  
   
 ※音声ファイルは付属していないので各自で用意してください。  
+
+# ライセンス  
+The Unlicense(パブリックドメイン)
